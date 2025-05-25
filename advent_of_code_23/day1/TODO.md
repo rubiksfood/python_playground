@@ -27,7 +27,6 @@ Turn the 2-digit number into an int.
 Add the new int to a running total.
 
 # Pseudocode:
-
 with open("advent_of_code_23/day1/input.txt") as file:
     data = file.read().splitlines()
     def answer_1:
@@ -40,63 +39,16 @@ with open("advent_of_code_23/day1/input.txt") as file:
                     digit_one = char
                     break
 
-# Real code:
+# Mental solution (p.2):
+- Read in the input, line by line.
+- Using RegEx, search for the 1st spelled number or digit. Assign to digit_one.
+- Using RegEx, search for the last spelled number or digit. Assign to digit_two.
+- Concatenate the 2 numbers.
+- Turn the 2-digit number into an int.
+- Add the new int to a running total.
 
-with open("advent_of_code_23/day1/input.txt") as file:
-    data = file.read().splitlines()
-    def answer_1:
-        running_total = 0
-        for value in data:
-            digit_one = None
-            digit_two = None
-            for char in value:
-                if char.isdigit():
-                    digit_one = char
-                    break
-            valueReverse = value[::-1]
-            for char in valueReverse:
-                if char.isdigit():
-                    digit_two = char
-                    break
-            combined = digit_one + digit_two
-            combined = int(combined)
-            running_total += combined
-        print(running_total)
-    answer_1()
+# Notes for solution:
+- Using RegEx to find the last instance of a pattern?
+Use { .find() / re.search() & .rfind()??? }
 
- def answer_2():
-        spelled = ('one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine')
-        running_total = 0
-        for value in data:
-            digit_one = None
-            digit_two = None
-            for char in value:
-                if char.isdigit():
-                    digit_one = char
-                    break
-                else:
-                    for i in range(0):
-                        for j in range(0):
-                            if char == spelled[i][j]:
-                                spelled_digit += char
-                            if spelled_digit == spelled[i]:
-                                digit_one = i + 1
-                                break
-            valueReverse = value[::-1]
-            for char in valueReverse:
-                if char.isdigit():
-                    digit_two = char
-                    break
-                else: 
-                    for i in range(0):
-                        for j in range(0):
-                            if char == spelled[i][j]:
-                                spelled_digit_2 += char
-                            if spelled_digit_2 == spelled[i]:
-                                digit_two = i + 1
-                                break
-            combined = digit_one + digit_two
-            combined = int(combined)
-            running_total += combined
-        print(running_total)
-    answer_2()
+# Pseudocode (p.2):
