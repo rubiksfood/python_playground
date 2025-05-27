@@ -1,5 +1,5 @@
 # REMEMBER:
-- Figure out the problem in your head first.
+- Figure out the problem in your head first. LOOK OUT FOR EDGE-CASES!
 - Then write pseudocode.
 - THEN, write real code.
 
@@ -38,6 +38,9 @@ with open("advent_of_code_23/day1/input.txt") as file:
                 if char.isdigit():
                     digit_one = char
                     break
+            etc.
+
+
 
 # Mental solution (p.2):
 - Read in the input, line by line.
@@ -49,6 +52,11 @@ with open("advent_of_code_23/day1/input.txt") as file:
 
 # Notes for solution:
 - Using RegEx to find the last instance of a pattern?
-Use { .find() / re.search() & .rfind()??? }
+Use { re.find() / re.search() / re.findall() }
+- Add a lookahead assertion to the regex to allow overlapping matches!:
+reg_ex = (r'one|two|three|four|five|six|seven|eight|nine|\d')
+reg_ex = (r'(?=(one|two|three|four|five|six|seven|eight|nine|\d))')
 
-# Pseudocode (p.2):
+Possible answers:
+55362 = Too high
+55358 = Correct answer
