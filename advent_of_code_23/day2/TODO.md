@@ -13,16 +13,26 @@ Calculate the sum of the IDs of the games that were possible with the configurat
 
 # Mental solution:
 - Assign the variables: red = 12, green = 13, blue = 14.
-- Line by line, check each of the three sets. 
+- Line by line, check each of the three sets - set by set.
 - If any colours exceed the given variables, stop checking. Move to next line.
 - Else, add the ID number to a running total.
 
 # Pseudocode:
 
+# Notes for solution:
+- 4291: Answer is too high.
+- 2545: Correct
 
-# Mental solution (p.2):
+
+## Part 2:
+
+
+# Mental solution:
 - 
 - 
+
+# Pseudocode:
+
 
 # Notes for solution:
-- 
+
