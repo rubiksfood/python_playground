@@ -9,8 +9,8 @@ with open("advent_of_code_23/day1/input.txt") as file:
                 if char.isdigit():
                     digit_one = char
                     break
-            valueReverse = value[::-1]
-            for char in valueReverse:
+            value_reverse = value[::-1]
+            for char in value_reverse:
                 if char.isdigit():
                     digit_two = char
                     break
