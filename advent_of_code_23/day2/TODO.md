@@ -24,12 +24,16 @@ Calculate the sum of the IDs of the games that were possible with the configurat
 - 2545: Correct
 
 
-## Part 2:
-
+## Part 2 - Task:
+Calculate the sum of the powers of each colour of every game, with the least possible cubes.
+I.e. If 1 games is possible with 2 red, 12 blue, 20 green = 2 x 12 x 20 = 480 += running total.
 
 # Mental solution:
-- 
-- 
+- Assign the variables: red = 0, green = 0, blue = 0.
+- Line by line, check each of the three sets - set by set.
+- If any colours in a set > the current colour variables, update them with the larger number.
+- Multiply the final numbers of each colour at the end of each game.
+- Add this number to the running total.
 
 # Pseudocode:
 
