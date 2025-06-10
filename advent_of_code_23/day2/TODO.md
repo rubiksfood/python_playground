@@ -39,4 +39,4 @@ I.e. If 1 games is possible with 2 red, 12 blue, 20 green = 2 x 12 x 20 = 480 +=
 
 
 # Notes for solution:
-
+- 78111: Correct
