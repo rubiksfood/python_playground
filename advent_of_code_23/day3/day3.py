@@ -1,6 +1,6 @@
 import re
 
-with open("advent_of_code_23/day3/input.txt") as file:
+with open("advent_of_code_23/day3/test_input.txt") as file:
     data = file.read().splitlines()
     def answer_1():
         symbols = [',', '!', '?', ':', ';', '-', '_', '=', '+', '*', '/', '\\', '|', '(', ')', '[', ']', '{', '}', '<', '>', '"', "'", '@', '#', '$', '%', '^', '&', '~', '`']
@@ -41,3 +41,29 @@ with open("advent_of_code_23/day3/input.txt") as file:
         print(running_total)
         return running_total
     answer_1()
+
+    def answer_2():
+        running_total = 0
+        for y in range(len(data)):
+            for x in range(len(data[y])):
+                if (data[y][x] == '*'):
+                    num_list = []
+                    if (x - 1 >= 0 and data[y][x - 1].isdigit()):
+                        leftmost = x - 1
+                        while (leftmost - 1 >= 0 and data[y][leftmost - 1].isdigit()):
+                            leftmost -= 1
+                        num_list.append(int(data[y][leftmost:x]))
+
+                    if (x + 1 >= 0 and data[y][x + 1].isdigit()):
+                        rightmost = x + 1
+                        while (rightmost + 1 < len(data[y]) and data[y][rightmost + 1].isdigit()):
+                            rightmost += 1
+                        num_list.append(int(data[y][x + 1:rightmost + 1]))
+
+                    # TODO: Check above and below (between x-1 - x+1) for more numbers
+
+                    if (len(num_list) == 2):
+                        running_total += num_list[0] * num_list[1]
+                        continue
+        print(running_total)
+    answer_2()

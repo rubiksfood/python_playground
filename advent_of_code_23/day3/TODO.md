@@ -32,10 +32,15 @@ OR
 
 
 ## Part 2 - Task:
-
+Find the sum of (the product of 2 numbers that are adjacent to a '*' symbol)
 
 # Mental solution:
-- 
+- Find each symbol in the input.
+- For loop through each symbol.
+-   Check the cooridnates that surround the symbol.
+-   If you find a number, add that number to a temporary list.
+-   Find all numbers that surround the symbol...?
+-   If exactly TWO numbers surround the symbol, multiply them and add to a running total.
 
 # Pseudocode:
 
