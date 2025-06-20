@@ -18,15 +18,17 @@ Find the sum of all the valid numbers.
 -   Find all numbers that surround the symbol...?
 - [How do you prevent duplicates without huge overhead???]
 OR
-- Look at every number in the input.
-- Check all the coordinates that surround the number.
+- Look for every number in the input.
+- Add that number to a list
+- If = last number of list, ignore.
+- Otherwise, check all the coordinates that surround the number.
 - If any contain a symbol, add the number to a running total.
-- Done?
 
 # Pseudocode:
 
 # Notes for solution:
-- 
+13619 - Too low.
+506346 - Too low.
 
 
 ## Part 2 - Task:
